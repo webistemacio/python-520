@@ -1,10 +1,3 @@
-#String_formatada = '{:.>20}'.format('Lucas')
-#print(String_formatada)
-#Nome(20)
-#Idade(5)
-#Endereco(50)
-#Sexo(2)
-#Email(30)
 lista_de_usuarios = [
   {
     "nome": "qMHHOwoAaYECgB",
@@ -147,18 +140,12 @@ lista_de_usuarios = [
     "endereco": "Rua ioMdZJPBgdMUzWsDg"
   }
 ]
+#Testar e imprimir somente os e-mails que contiverem "l" ou "j".
 
+lista_final = []
+for n in lista_de_usuarios:
+    if 'l' in n['email'].lower() or 'j' in n['email'].lower():
+      if n['idade'] > 25:
+        lista_final.append(n)
 
-Template = '{:>20}|{:>5}|{:>50}|{:>2}|{:>30}'
-Cabecalho = Template.format ('NOME', 'IDADE', 'ENDERECO', 'SEXO', 'EMAIL')
-print(Cabecalho)
-for usuario in lista_de_usuarios:
-	usuario_formatado= Template.format(
-		usuario['nome'],
-		usuario['idade'],
-		usuario['endereco'],
-		usuario['sexo'],
-		usuario['email'],
-		)
-	print(usuario_formatado)
-	
+print(lista_final)
