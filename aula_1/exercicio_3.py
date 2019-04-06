@@ -1,0 +1,7 @@
+String_formatada = '{:.>20}'.format('Lucas')
+print(String_formatada)
+#Nome(20)
+#Idade(5)
+#Endereco(50)
+#Sexo(2)
+#Email(30)
